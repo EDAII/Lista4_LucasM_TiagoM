@@ -102,7 +102,7 @@ void ensaio_n_termos(int n){
     Ticks[1] = clock();
     auto tempo = ((Ticks[1] - Ticks[0]) * 1000 / CLOCKS_PER_SEC);
 
-    cout << "Ensaio com " << n << " elementos na lista" << endl;
+    cout << "Ensaio com " << veiculos.size() << " elementos na lista" << endl;
     cout << "Tempo de ordenação: " << tempo << "ms" << endl; 
 }
 
@@ -125,29 +125,17 @@ int main () {
 
     vector<Veiculo> veiculos;
 
-    Veiculo aux("ZZZ9999");
+    int ordenacao[] = {100000,200000,500000, 1000000, 2000000, 5000000, 10000000, 20000000, 50000000, 0};
 
-    veiculos.push_back(aux);
-
-    aux.placa = "ZZZ9990";
-
-    veiculos.push_back(aux);
-
-    aux.placa = "ZZA9990";
-
-    veiculos.push_back(aux);
-    
-    aux.placa = "AAA0000";
-
-    veiculos.push_back(aux);
-    
-    veiculos = radix(veiculos);
-    
-    for(auto p:veiculos){
-        cout << p.placa << endl;
+    for (int i=0; ordenacao[i] != 0; i++) {
+        ensaio_n_termos(ordenacao[i]);
+        
+        // veiculos = radix(veiculos);
+        
+        // for(auto p:veiculos){
+        //     cout << p.placa << endl;
+        // }
     }
-
-    ensaio_lista_definida(veiculos);
 
     return 0;
 }

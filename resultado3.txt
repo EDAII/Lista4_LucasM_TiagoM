@@ -1,0 +1,16 @@
+Ensaio com 100000 elementos na lista
+Tempo de ordenação: 648ms
+Ensaio com 200000 elementos na lista
+Tempo de ordenação: 1317ms
+Ensaio com 500000 elementos na lista
+Tempo de ordenação: 3215ms
+Ensaio com 1000000 elementos na lista
+Tempo de ordenação: 6506ms
+Ensaio com 2000000 elementos na lista
+Tempo de ordenação: 12663ms
+Ensaio com 5000000 elementos na lista
+Tempo de ordenação: 34077ms
+Ensaio com 10000000 elementos na lista
+Tempo de ordenação: 82964ms
+Ensaio com 20000000 elementos na lista
+Tempo de ordenação: 1547210ms

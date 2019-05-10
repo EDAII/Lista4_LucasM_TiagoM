@@ -1,0 +1,28 @@
+Ensaio com 100000 elementos na lista
+Tempo de ordenação: 583ms
+Ensaio com 0 elementos na lista
+Tempo de ordenação: 0ms
+Ensaio com 200000 elementos na lista
+Tempo de ordenação: 1239ms
+Ensaio com 0 elementos na lista
+Tempo de ordenação: 0ms
+Ensaio com 500000 elementos na lista
+Tempo de ordenação: 3227ms
+Ensaio com 0 elementos na lista
+Tempo de ordenação: 0ms
+Ensaio com 1000000 elementos na lista
+Tempo de ordenação: 6596ms
+Ensaio com 0 elementos na lista
+Tempo de ordenação: 0ms
+Ensaio com 2000000 elementos na lista
+Tempo de ordenação: 12654ms
+Ensaio com 0 elementos na lista
+Tempo de ordenação: 0ms
+Ensaio com 5000000 elementos na lista
+Tempo de ordenação: 32747ms
+Ensaio com 0 elementos na lista
+Tempo de ordenação: 0ms
+Ensaio com 10000000 elementos na lista
+Tempo de ordenação: 79094ms
+Ensaio com 0 elementos na lista
+Tempo de ordenação: 0ms
