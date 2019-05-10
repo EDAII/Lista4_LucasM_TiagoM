@@ -25,6 +25,10 @@ class Veiculo {
             this->placa = placa;
         }
 
+        Veiculo(){
+            
+        }
+
 };
 
 vector<Veiculo> radix(vector<Veiculo> veiculos){
@@ -47,6 +51,41 @@ vector<Veiculo> radix(vector<Veiculo> veiculos){
         }
     }
     return veiculos;
+}
+
+vector<Veiculo> ler_arquivo(){
+
+    vector<Veiculo> aux;
+    Veiculo veiculo;
+    string linha;
+
+    ifstream arquivo("Veiculos.txt");
+
+    while(getline(arquivo, linha)){
+        veiculo.placa = linha;
+
+        getline(arquivo, linha);
+        veiculo.montadora = linha;
+
+        getline(arquivo, linha);
+        veiculo.modelo = linha;
+
+        getline(arquivo, linha);
+        veiculo.ano_modelo = atoi(linha.c_str());
+
+        getline(arquivo, linha);
+        veiculo.estado = linha;
+
+        getline(arquivo, linha);
+        veiculo.proprietario = linha;
+
+        getline(arquivo, linha);
+
+        aux.push_back(veiculo);
+    }
+
+    return aux;
+
 }
 
 int main () {
