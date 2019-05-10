@@ -22,7 +22,7 @@ int main(){
     }
 
     arquivo1.close();
-    ifstream arquivo2("./Lista_informacoes/montadora.txt");
+    ifstream arquivo2("./Lista_informacoes/montadoras.txt");
 
      while(getline(arquivo2 ,linha)){
         montadora.push_back(linha);
@@ -36,7 +36,7 @@ int main(){
     }
 
     arquivo3.close();
-    ifstream arquivo4("./Lista_informacoes/estado.txt");
+    ifstream arquivo4("./Lista_informacoes/estados.txt");
 
      while(getline(arquivo4 ,linha)){
         estado.push_back(linha);
@@ -50,8 +50,13 @@ int main(){
     }
 
     arquivo5.close();
+    ifstream arquivo6("./Lista_informacoes/modelos.txt");
 
-    cout << "chegou aqui" << endl;
+     while(getline(arquivo6 ,linha)){
+        modelo.push_back(linha);
+    }
+    arquivo6.close();
+
 
     for (int i=0; i < 10; i++) {
         srand(clock());
@@ -61,8 +66,6 @@ int main(){
         pos = rand() % placa.size();
         cout << placa[pos] << endl;
         
-    cout << "chegou aqui 2" << endl;
-
         pos = rand() % montadora.size();
         cout << montadora[pos] << endl;
 
