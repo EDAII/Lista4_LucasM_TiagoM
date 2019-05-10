@@ -26,7 +26,7 @@ class Veiculo {
         }
 
         Veiculo(){
-            
+
         }
 
 };
@@ -53,15 +53,16 @@ vector<Veiculo> radix(vector<Veiculo> veiculos){
     return veiculos;
 }
 
-vector<Veiculo> ler_arquivo(){
+vector<Veiculo> ler_arquivo(int n){
 
     vector<Veiculo> aux;
     Veiculo veiculo;
     string linha;
+    int a=0;
 
     ifstream arquivo("Veiculos.txt");
 
-    while(getline(arquivo, linha)){
+    while(getline(arquivo, linha) && a<n){
         veiculo.placa = linha;
 
         getline(arquivo, linha);
@@ -82,9 +83,41 @@ vector<Veiculo> ler_arquivo(){
         getline(arquivo, linha);
 
         aux.push_back(veiculo);
+        a++;
     }
-
     return aux;
+}
+
+void ensaio_n_termos(int n){
+
+    vector<Veiculo> veiculos;
+
+    veiculos = ler_arquivo(n);
+
+    clock_t Ticks[2];
+    Ticks[0] = clock();
+
+    veiculos = radix(veiculos);
+
+    Ticks[1] = clock();
+    auto tempo = ((Ticks[1] - Ticks[0]) * 1000 / CLOCKS_PER_SEC);
+
+    cout << "Ensaio com " << n << " elementos na lista" << endl;
+    cout << "Tempo de ordenação: " << tempo << "ms" << endl; 
+}
+
+void ensaio_lista_definida(vector<Veiculo> veiculos){
+
+    clock_t Ticks[2];
+    Ticks[0] = clock();
+
+    veiculos = radix(veiculos);
+
+    Ticks[1] = clock();
+    auto tempo = ((Ticks[1] - Ticks[0]) * 1000 / CLOCKS_PER_SEC);
+
+    cout << "Ensaio com " << veiculos.size() << " elementos na lista" << endl;
+    cout << "Tempo de ordenação: " << tempo << "ms" << endl;
 
 }
 
@@ -113,6 +146,8 @@ int main () {
     for(auto p:veiculos){
         cout << p.placa << endl;
     }
+
+    ensaio_lista_definida(veiculos);
 
     return 0;
 }
