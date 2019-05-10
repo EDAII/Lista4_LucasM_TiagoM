@@ -15,13 +15,13 @@ int main(){
     string linha;
     string buffer{""};
 
-    ifstream arquivo1("./Lista_informacoes/placas.txt");
+    // ifstream arquivo1("./Lista_informacoes/placas.txt");
 
-    while(getline(arquivo1 ,linha)){
-        placa.push_back(linha);
-    }
+    // while(getline(arquivo1 ,linha)){
+    //     placa.push_back(linha);
+    // }
 
-    arquivo1.close();
+    // arquivo1.close();
     ifstream arquivo2("./Lista_informacoes/montadoras.txt");
 
      while(getline(arquivo2 ,linha)){
@@ -58,13 +58,16 @@ int main(){
     arquivo6.close();
 
 
-    for (int i=0; i < 10; i++) {
+    for (int i=0; i < 50000000; i++) {
         srand(clock());
 
         int pos;
 
-        pos = rand() % placa.size();
-        cout << placa[pos] << endl;
+        printf ("%c%c%c", (rand() % 25)+65, (rand() % 25)+65, (rand() % 25)+65);
+        cout << rand() % 9 << rand() % 9 << rand() % 9 << rand() % 9 << endl;
+
+        // pos = rand() % placa.size();
+        // cout << placa[pos] << endl;
         
         pos = rand() % montadora.size();
         cout << montadora[pos] << endl;

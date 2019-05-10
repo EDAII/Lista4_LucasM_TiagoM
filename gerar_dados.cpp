@@ -7,20 +7,20 @@ int main () {
     int cont = 0;
 
     for (char a='A'; a<='Z'; a++) {
-        b:
+        // b:
         for (char b='A'; b<='Z'; b++) {
-            c:  
+            // c:  
             for (char c='A'; c<='Z'; c++) {
-                d:
+                // d:
                 for (int d=0; d<=9; d++) {
-                    e:
+                    // e:
                    for (int e=0; e<=9; e++) {
-                       f:
+                    //    f:
                         for (int f=0; f<=9; f++) {
-                            g:
+                            // g:
                             for (int g=0; g<=9; g++) {
                                 cout << a << b << c << d << e << f << g << endl;
-                                cont ++;
+                                /*cont ++;
                                 if (cont%1234123 == 0) {
                                     g++;
                                     if (g>9) goto g;
@@ -48,7 +48,7 @@ int main () {
                                 if (cont%95679 == 0) {
                                     a++;
                                     if (a>'Z') goto a;
-                                }
+                                }*/
                             }
                         }
                     }
@@ -56,7 +56,7 @@ int main () {
             }
         }
     }
-    a:
+    // a:
 
 
     return 0;
