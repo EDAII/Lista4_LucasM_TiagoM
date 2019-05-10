@@ -32,5 +32,6 @@ g++ -o proj lista4.cpp
 <img src="https://github.com/EDAII/Lista4_LucasM_TiagoM/blob/master/grafico.jpeg">
 
 Após a análise dos resultados obtidos, podemos notar que o Radix tem a desvantagem por consumir muita memória, uma vez que duplica o tamanho do vetor.
+
 Devito a isso, podemos notar que os itens ordenados por ms cae drasticamente quando se é utilizado uma grande quantidade de informações. Como exemplo temos a tentativa de ordenação de 20 milhões de itens, no qual o sistema precisou realocar mais de 30 GB de memória no SSD do computador e demorou 18x mais tempo pra ordenar em relação a um vetor de metade do seu tamanho. Lembrando que o tempo gasto deveria ser 2x maior, sendo que o algoritmo Radix Sort é linear.
 
